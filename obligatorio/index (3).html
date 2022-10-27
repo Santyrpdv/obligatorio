@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="registroUsuario">
+    <h2>REGISTRO DE USUARIO</h2>
+    <input type="text" placeholder="Nombre"><br>
+    <input type="text" placeholder="Nombre de usuario"><br>
+    <input type="file" name="Seleccionar foto"><br>
+    <input type="text" placeholder="Contraseña">
+    <ul>
+        <li>Contraseña con mínimo de 5 caracteres</li>
+        <li>Una mayúscula</li>
+        <li>Una minúscula</li>
+        <li>Un número</li>
+    </ul><br>
+    <input type="button" value="Registro"><br>
+ </div>
+<div id="ingresoDeUsuario">
+    <form>
+        <h2>INGRESO DE USUARIO</h2>
+        <input type="text" placeholder="Nombre de usuario"><br>
+        <input type="text" placeholder="Contraseña"><br>
+        <input type="button" value="Ingresar">
+        <a href="">Registrarse</a>
+    </form>
+</div>
+<div id="logOut">
+    <p>Juan Perz - <a href="">Salir</a></p>
+    <!-- Aca poner link de pagina principal -->
+
+</div>
+
+<div id="nuevaSolicitudDeCarga">
+    <h2>NUEVA SOLICITUD DE CARGA</h2>
+    <select>
+        <option> Carga general</option>
+        <option> Carga refrigerada</option>
+        <option> Carga peligrosa</option>
+    </select><br>
+    <textarea>Descripción de la mercaderia</textarea><br>
+    <select >
+        <option disabled selected>Seleccione puerto de origen</option>
+        <option> Panama</option>
+        <option> Shangai</option>
+        <option> Singapur</option>
+        <option> Hong Kong</option>
+        <option> Dubai</option>
+        <option> Roterdam</option>
+        <option> Los Angeles</option>
+        <option> Hamburgo</option>
+        <option> Buenos Aires</option>
+        <option>Rio de Janeiro </option>
+    </select><br>
+    <input type="number" placeholder="Cantidad de contenedores"><br>
+    <input type="text" placeholder="Nombre de la empresa"><br>
+    <input type="button" value="Ingresar">
+</div>
+<div id="consultarSolicitudes">
+    <h2>CONSULTAR SOLICITUDES</h2>
+    <input type="text">
+    <input type="button" value="Buscar">
+    <table border="1">
+        <tr>
+            <td>Numero de importacion</td>
+            <td>Cantidad de contenedores</td>
+            <td>Tipo de carga</td>
+            <td>Puerto de origen</td>
+            <td>Descripción</td>
+            <td>Estado</td>
+            <td></td>
+      </tr>
+      <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>Carga general</td>
+            <td>Panama</td>
+            <td>Juguetes</td>
+            <td>Pendiente</td>
+            <td><input type="button" value="Cancelar"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>5</td>
+        <td>Carga peligrosa</td>
+        <td>Panama</td>
+        <td>Explosivos</td>
+        <td>Pendiente</td>
+        <td><input type="button" value="Cancelar" ></td>
+        </tr>
+    </table>
+</div>
+<!-- informacion Estadistica -->
+<div id="visualizarInformacionEstadistica">
+    <h2>Visualizar informacion estadistica</h2>
+    <table border="1">
+        <tr>
+            <td>Cagas totales</td>
+            <td>cargas canceladas</td>
+            <td>Porcentaje</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>10</td>
+            <td>75%</td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <td>Proximas importaciones</td>
+            <td>Linea de carga</td>
+            <td>Fecha</td>
+        </tr>
+        <tr>
+            <td>12345</td>
+            <td>ABC</td>
+            <td>15/11/2022</td>
+        </tr>
+        <tr>
+            <td>13456</td>
+            <td>TCC</td>
+            <td>25/11/2022</td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <td>Linea de carga</td>
+            <td>Porcentaje de carga</td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>20%</td>
+        </tr>
+        <tr>
+            <td>nEXT</td>
+            <td>35%</td>
+        </tr>
+        <tr>
+            <td>TCC</td>
+            <td>30%</td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>15%</td>
+        </tr>
+    </table>
+</div>
+<!-- Crear el viaje de un buque -->
+<div id="CrearViaje">
+    <form>
+        <h2>CREAR UN VIAJE</h2>
+        <input type="text" placeholder="Nombre del buque"><br>
+        <input type="text" placeholder="Cantidad maxima de contenedores"><br>
+        <input type="text" placeholder="Linea de carga"><br>
+        <input type="text" placeholder="Fecha de llegada"><br>
+        <input type="button" value="Ingresar">
+    </form>
+</div>
+<!-- Asignar una solicitud de carga pendiente a un viaje -->
+<div id="AsignarCarga">
+    <h2>ASIGNAR UNA SOLICITUD DE CARGA PENDIENTE</h2>
+    <h3>MIS VIAJES</h3>
+    <table border="1">
+        <tr>
+            <td>
+                <select>
+                    <option disabled selected>Seleccione un viaje / Origen</option>
+                    <option> # 15468-Panama </option>
+                    <option> # 15687-Buenos Aires </option>
+                </select>
+            </td>
+            <td>Nombre de buque</td>
+            <td>Contenedores permitidos en el viaje</td>
+            <td>Contenedores seleccionados en el viaje</td>
+        </tr>
+        <tr>
+            <td>(# 15468-Panama)</td>
+            <td>HMM3</td>
+            <td>15</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <h3>SOLICITUDES PENDIENTES</h3>
+        <select>
+            <option disabled selected>Filtrar puerto de origen</option>
+            <option> Mostrar todos</option>
+            <option> Panama</option>
+            <option> Shangai</option>
+            <option> Singapur</option>
+            <option> Hong Kong</option>
+            <option> Dubai</option>
+            <option> Roterdam</option>
+            <option> Los Angeles</option>
+            <option> Hamburgo</option>
+            <option> Buenos Aires</option>
+            <option> Rio de Janeiro</option>
+        </select>
+        <input type="button" value="filtrar">
+        <tr>
+            <td>Linea de carga</td>
+            <td>Numero de contenedores</td>
+            <td>Origen</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>7</td>
+            <td>Panama</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>nEXT</td>
+            <td>5</td>
+            <td>Panama</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>6</td>
+            <td>Panama</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>3</td>
+            <td>Buenos Aires</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>15</td>
+            <td>Buenos Aires</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>22</td>
+            <td>Dubai</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>16</td>
+            <td>Dubai</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>13</td>
+            <td>Rio de Janeiro</td>
+            <td><input type="checkbox"></td>
+        </tr>
+       
+    </table>
+    <input type="button"  id="btnConfirmarCarga" value="Confirmar">
+    
+
+</div>
+<div id="rollover">
+    <h2>MIS VIAJES CONFIRMADOS</h2>
+    <select>
+        <option disabled selected>Seleccione un viaje / Origen</option>
+        <option> # 15463 - Buenos Aires</option>
+        <option> # 15468 - Buenos Aires</option>
+        <option> # 15687 - Buenos Aires</option>
+    </select>
+    <input type="button" value="filtrar">
+    <table border="1">
+        <tr>
+            <td>Linea de carga</td>
+            <td>Numero de contenedores</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>6</td>
+            <td>
+                <select>
+                    <option disabled selected>Seleccione un viaje / Cupos disponibles</option>
+                    <option> # 15468- 30 cupos disponibles </option>
+                    <option> # 15687- 5 cupos disponibles </option>
+                    <option> Pasar carga a pendientes</option>
+                </select>
+                <input type="button" value="Rolear carga">
+            </td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>3</td>
+            <td>
+                <select>
+                    <option disabled selected>Seleccione un viaje / Cupos disponibles</option>
+                    <option> # 15468- 30 cupos disponibles </option>
+                    <option> # 15687- 5 cupos disponibles </option>
+                </select>
+                <input type="button" value="Rolear carga">
+            </td>
+        </tr>
+        <tr>
+            <td>Loop</td>
+            <td>15</td>
+            <td>
+                <select>
+                    <option disabled selected>Seleccione un viaje / Cupos disponibles</option>
+                    <option> # 15468- 30 cupos disponibles </option>
+                    <option> # 15687- 5 cupos disponibles </option>
+                </select>
+                <input type="button" value="Rolear carga">
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="manifiestoCarga">
+    <h2>MANIFIESTO DE CARGA</h2>
+    <select>
+        <option disabled selected>Seleccione un viaje / Origen</option>
+        <option> # 15463 - Buenos Aires</option>
+        <option> # 15468 - Buenos Aires</option>
+        <option> # 15687 - Buenos Aires</option>
+    </select>
+    <input type="button" value="filtrar">
+    <table border="1">
+    <tr>
+        <td>ORIGEN</td>
+        <td>CONTENEDORES</td>
+        <td>IMPORTADOR</td>
+        <td>DESCRIPCCION</td>
+        <td>TIPO DE MERCADERIA</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>7</td>
+        <td>ABC</td>
+        <td>CARNE</td>
+        <td>CARGA REFRIGERADA</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>5</td>
+        <td>nEXT</td>
+        <td>JUGUETES</td>
+        <td>CARGA GENERAL</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>6</td>
+        <td>ABC</td>
+        <td>EXPLOSIVOS</td>
+        <td>CARGA PELIGROSA</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>3</td>
+        <td>Loop</td>
+        <td>TECNOLOGIA</td>
+        <td>CARGA GENERAL</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>15</td>
+        <td>Loop</td>
+        <td>ACCESORIOS</td>
+        <td>CARGA GENERAL</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>22</td>
+        <td>Loop</td>
+        <td>TELEVISORES</td>
+        <td>CARGA GENERAL</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>16</td>
+        <td>Loop</td>
+        <td>QUIMICOS</td>
+        <td>CARGA PELIGROSA</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>13</td>
+        <td>TTC</td>
+        <td>PANELES SOLARES</td>
+        <td>CARGA GENERAL</td>
+    </tr>
+</table>
+<input type="button" value="DESCARGAR">
+</div>
+<div id="IgnorarCargas">
+    <h2>IGNORAR CARGAS</h2>
+    <select>
+        <option disabled selected>Seleccione importador</option>
+        <option> TTC</option>
+        <option> Loop</option>
+        <option> ABC</option>
+        <option> nEXT</option>
+    </select>
+    <input type="button" value="filtrar">
+    <table border="1">
+        <tr>
+            <td>ORIGEN</td>
+            <td>CONTENEDORES</td>
+            <td>ESTADO</td>
+            <td>DESCRIPCCION</td>
+            <td>TIPO DE MERCADERIA</td>
+            <td>CAMBIAR ESTADO</td>
+        </tr>
+        <tr>
+            <td>Panama</td>
+            <td>7</td>
+            <td>CANCELADA</td>
+            <td>CARNE</td>
+            <td>CARGA REFRIGERADA</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+        <tr>
+            <td>Shangai</td>
+            <td>5</td>
+            <td>CANCELADA</td>
+            <td>JUGUETES</td>
+            <td>CARGA GENERAL</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+        <tr>
+            <td>Panama</td>
+            <td>6</td>
+            <td>CANCELADA</td>
+            <td>EXPLOSIVOS</td>
+            <td>CARGA PELIGROSA</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+        <tr>
+            <td>Panama</td>
+            <td>3</td>
+            <td>CANCELADA</td>
+            <td>TECNOLOGIA</td>
+            <td>CARGA GENERAL</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+        <tr>
+            <td>Buenos Aires</td>
+            <td>15</td>
+            <td>CANCELADA</td>
+            <td>ACCESORIOS</td>
+            <td>CARGA GENERAL</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+        <tr>
+            <td>Dubai</td>
+            <td>22</td>
+            <td>CANCELADA</td>
+            <td>TELEVISORES</td>
+            <td>CARGA GENERAL</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+        <tr>
+            <td>Shangai</td>
+            <td>16</td>
+            <td>CANCELADA</td>
+            <td>QUIMICOS</td>
+            <td>CARGA PELIGROSA</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+        <tr>
+            <td>Panama</td>
+            <td>13</td>
+            <td>CANCELADA</td>
+            <td>PANELES SOLARES</td>
+            <td>CARGA GENERAL</td>
+            <td><input type="button" value="IGNORAR"></td>
+        </tr>
+    </table>
+</div>
+<div id="cargaPeligrosa">
+    <h2>LISTA DE CARGA PELIGROSA</h2>
+    <select>
+        <option disabled selected>Seleccione un viaje / Origen</option>
+        <option> # 15463 - Panama</option>
+        <option> # 15468 - Buenos Aires</option>
+        <option> # 15687 - Shangai</option>
+    </select>
+    <input type="button" value="filtrar">
+    <table border="1">
+    <tr>
+        <td>ORIGEN</td>
+        <td>CONTENEDORES</td>
+        <td>IMPORTADOR</td>
+        <td>DESCRIPCCION</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>7</td>
+        <td>ABC</td>
+        <td>INSUMOS MEDICOS</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>5</td>
+        <td>nEXT</td>
+        <td>MUNICIONES</td>
+        
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>6</td>
+        <td>ABC</td>
+        <td>EXPLOSIVOS</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>3</td>
+        <td>Loop</td>
+        <td>PLOMO</td>
+        
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>15</td>
+        <td>Loop</td>
+        <td>SUSTANCIAS CORROSIVAS</td>
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>1</td>
+        <td>Loop</td>
+        <td>URANIO</td>
+        
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>16</td>
+        <td>Loop</td>
+        <td>QUIMICOS</td>
+        
+    </tr>
+    <tr>
+        <td>Panama</td>
+        <td>13</td>
+        <td>TTC</td>
+        <td>ARMAS</td>
+    </tr>
+</table>
+<input type="button" value="DESCARGAR">
+</div>
+</body>
+</html>
